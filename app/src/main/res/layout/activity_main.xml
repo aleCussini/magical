@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtsoftware.magical.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/btnUpdateDB"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="2dp"
+        android:onClick="updateDB"
+        android:text="Aggiorna Il DataBase"
+        app:layout_constraintBottom_toTopOf="@+id/cardNameAutoComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Aggiorna Il DataBase" />
+
+    <AutoCompleteTextView
+        android:id="@+id/cardNameAutoComplete"
+        android:layout_width="352dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="391dp"
+        android:hint="Cerca qui"
+        app:layout_constraintBottom_toTopOf="@+id/cardID"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateDB" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="435dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardNameAutoComplete" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFlip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="10dp"
+        android:onClick="flipCard"
+        android:text="Flip"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/cardID" />
+
+    <TextView
+        android:id="@+id/cardID"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginStart="21dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnFlip"
+        app:layout_constraintEnd_toEndOf="@+id/btnFlip"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/cardNameAutoComplete" />
+
+</android.support.constraint.ConstraintLayout>
